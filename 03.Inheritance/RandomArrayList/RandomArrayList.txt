@@ -1,0 +1,6 @@
+Random Array List
+--------------------
+Create a RandomArrayList class that has all the functionality of an ArrayList.
+Add additional function that returns and removes a random element from the list.
+
+•	Public method: getRandomElement(): Object
