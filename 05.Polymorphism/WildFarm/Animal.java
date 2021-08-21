@@ -1,0 +1,55 @@
+package Polymorphism.WildFarm;
+
+public abstract class Animal {
+    private String animalName;
+    private String animalType;
+    private double animalWeight;
+    private int foodEaten;
+
+    public Animal(String animalName, String animalType, double animalWeight) {
+        setAnimalName(animalName);
+        setAnimalType(animalType);
+        setAnimalWeight(animalWeight);
+        setFoodEaten(0);
+    }
+
+    public String getAnimalName() {
+        return animalName;
+    }
+
+    public void setAnimalName(String animalName) {
+        this.animalName = animalName;
+    }
+
+    public String getAnimalType() {
+        return animalType;
+    }
+
+    public void setAnimalType(String animalType) {
+        this.animalType = animalType;
+    }
+
+    public double getAnimalWeight() {
+        return animalWeight;
+    }
+
+    public void setAnimalWeight(double animalWeight) {
+        this.animalWeight = animalWeight;
+    }
+
+    public int getFoodEaten() {
+        return foodEaten;
+    }
+
+    public void setFoodEaten(int foodEaten) {
+        this.foodEaten = foodEaten;
+    }
+
+    protected void addFoodEaten(Food foodEaten) {
+        this.foodEaten += foodEaten.getQuantity();
+    }
+
+    abstract void makeSound();
+    abstract void eatFood(Food food);
+
+}
